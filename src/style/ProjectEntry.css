@@ -1,0 +1,113 @@
+.ProjectEntry {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.ProjectEntry .info {
+    width: 45%;
+
+    font-size: 1.5vmax;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ProjectEntry .info .title {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+
+    font-weight: 700;
+}
+
+.ProjectEntry .info .title img {
+    width: 10%;
+}
+
+.ProjectEntry .info .title p {
+    margin:0;
+    border-left: solid 5px #25a0db;
+    padding-left: 2%;
+    font-size: 1em;
+}
+
+.ProjectEntry .info p {
+    border: none;
+    padding: 0;
+    font-size: 0.65em;
+}
+
+.ProjectEntry .images {
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+
+.ProjectEntry .images img {
+    width: 100%;
+
+    border: solid 3px transparent;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg,#25a0db,#1c79bf);
+}
+
+.ProjectEntry .images .imgDots {
+    position: absolute;
+    bottom:1vmax;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5vmax;
+}
+
+.ProjectEntry .images .imgDots .imgDot {
+    width: 1vmax;
+    height: 1vmax;
+    background-color: #25a0db;
+    border: solid .2vmax #1c79bf;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.ProjectEntry .images .imgDots .selected {
+    width: 1vmax;
+    height: 1vmax;
+    background-color: #1c79bf;
+    border: solid .2vmax #1c79bf;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.ProjectEntry a {
+    width: 20%;
+
+    padding: 0.5%;
+    padding-inline: 1%;
+    background:transparent;
+
+    outline: none;
+    border: solid .22vmax #1c79bf;
+    border-radius: 1.5vmax;
+    color: #1c79bf;
+    font-weight: 700;
+    font-size: 0.65em;
+    text-align: center;
+
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.ProjectEntry a:hover {
+    border-color: #25a0db;
+    color: #25a0db;
+    transform: scale(1.05);
+}

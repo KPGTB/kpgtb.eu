@@ -1,0 +1,60 @@
+.Home {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url('../img/line.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.Home .info {
+    width: 80%;
+    font-size: 3vmax;
+    font-weight: bold;
+}
+
+.Home .info .nickname {
+    background-color: #25a0db;
+    background-image: linear-gradient(45deg,#25a0db,#7abf48);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Home a {
+    padding: 0.5%;
+    padding-inline: 1%;
+    background:transparent;
+
+    outline: none;
+    border: solid .22vmax #1c79bf;
+    border-radius: 1.5vmax;
+    color: #1c79bf;
+    font-weight: 700;
+    font-size: 2vmax;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    text-align: center;
+
+}
+
+.Home a:hover {
+    border-color: #25a0db;
+    color: #25a0db;
+    transform: scale(1.05);
+}
+
+.Home img {
+    position: absolute;
+    top:1%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 10vmax;
+}
