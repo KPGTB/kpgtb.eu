@@ -24,16 +24,16 @@ export default class ProjectEntry extends Component {
                     <a href={this.props.url} target="blank">Check it!</a>
                 </div>
                 <div className="images">
-                    <img src={this.state.currentImageUrl} alt={this.props.name + " image"} />
+                    <img src={this.state.currentImageUrl} alt={this.props.name + " image"} onClick={() => {window.open(this.state.currentImageUrl, "_blank")}}/>
                     <div className="imgDots">
                         {
                             this.props.images.map(url => {
                                 let idx = this.props.images.indexOf(url)
-                                return (<div>
+                                return (
                                     <button className={idx === this.state.currentImageIdx ? "imgDot selected" : "imgDot"} key={idx} onClick={(el) => {
                                         this.changeImageTo(idx)
                                     }}></button>
-                                </div>)
+                                )
                             })
                         }
                     </div>

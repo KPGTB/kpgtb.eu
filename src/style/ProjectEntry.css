@@ -10,7 +10,7 @@
 .ProjectEntry .info {
     width: 45%;
 
-    font-size: 1.5vmax;
+    font-size: 1.5rem;
 
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
 .ProjectEntry .info .title {
     display: flex;
     align-items: center;
-    gap: 5%;
+    gap: 5vmax;
 
     font-weight: 700;
 }
@@ -33,13 +33,13 @@
     margin:0;
     border-left: solid 5px #25a0db;
     padding-left: 2%;
-    font-size: 1em;
+    font-size: 1.5rem;
 }
 
 .ProjectEntry .info p {
     border: none;
     padding: 0;
-    font-size: 0.65em;
+    font-size: 1rem;
 }
 
 .ProjectEntry .images {
@@ -51,7 +51,7 @@
 .ProjectEntry .images img {
     width: 100%;
 
-    border: solid 3px transparent;
+    border: solid .22vmax transparent;
     border-image-slice: 1;
     border-image-source: linear-gradient(45deg,#25a0db,#1c79bf);
 }
@@ -78,17 +78,11 @@
 }
 
 .ProjectEntry .images .imgDots .selected {
-    width: 1vmax;
-    height: 1vmax;
     background-color: #1c79bf;
-    border: solid .2vmax #1c79bf;
-    cursor: pointer;
-    border-radius: 50%;
 }
 
 .ProjectEntry a {
     width: 20%;
-
     padding: 0.5%;
     padding-inline: 1%;
     background:transparent;
@@ -98,7 +92,7 @@
     border-radius: 1.5vmax;
     color: #1c79bf;
     font-weight: 700;
-    font-size: 0.65em;
+    font-size: 1rem;
     text-align: center;
 
     cursor: pointer;
@@ -110,4 +104,30 @@
     border-color: #25a0db;
     color: #25a0db;
     transform: scale(1.05);
+}
+
+@media (max-width: 1300px) {
+    .ProjectEntry a {
+        width: 40%;
+    }
+}
+
+@media (max-width: 550px) {
+    .ProjectEntry a {
+        width: auto;
+    }
+    .ProjectEntry {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vmax;
+    }
+
+    .ProjectEntry .images, .ProjectEntry .info {
+        width: 100%;
+    }
+
+    .ProjectEntry .info {
+        gap: 2.5vmax;
+    }
 }

@@ -14,7 +14,7 @@
 .Projects h1 {
     font-weight: 900;
     display: inline-block;
-    font-size: 2.5vmax;
+    font-size: 2.5rem;
     margin-bottom: 2vmax;
 
     background-color: #25a0db;
@@ -28,7 +28,7 @@
 }
 
 .Projects p {
-    font-size: 1.33vmax;
+    font-size: 1.33rem;
     margin-bottom: 2vmax;
     padding-left: 1vmax;
 
@@ -70,7 +70,7 @@
     text-align: center;
     color: #25a0db;
     font-weight: 700;
-    font-size: .75vmax;
+    font-size: .75rem;
     border-right: dashed .09vmax #1c79bf;
     padding-inline: 1vmax;
 }

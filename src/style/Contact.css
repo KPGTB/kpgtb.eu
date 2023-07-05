@@ -1,4 +1,4 @@
-.Home {
+.Contact {
     width: 100%;
     height: 100dvh;
     display: flex;
@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 5vmax;
 
     background-image: url('../img/line.png');
     background-size: cover;
@@ -13,47 +14,36 @@
     background-repeat: no-repeat;
 }
 
-.Home .info {
-    width: 80%;
-    font-size: 3rem;
+.Contact h1 {
+    font-family: 'Freehand', cursive;
+    font-size: 5rem;
     font-weight: bold;
-}
-
-.Home .info .nickname {
     background-color: #25a0db;
     background-image: linear-gradient(45deg,#25a0db,#7abf48);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.Home a {
-    padding: 0.5vh;
-    padding-inline: 3vmax;
-    background:transparent;
+.Contact .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
 
-    outline: none;
-    border: solid .22vmax #1c79bf;
-    border-radius: 1.5vmax;
-    color: #1c79bf;
-    font-weight: 700;
-    font-size: 2rem;
-
-    cursor: pointer;
+.Contact .container a {
+    color:rgb(39, 41, 49);
     text-decoration: none;
-
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    transition: all .1s linear;
+    cursor: pointer;
 }
 
-.Home a:hover {
-    border-color: #25a0db;
-    color: #25a0db;
-    transform: scale(1.05);
-}
-
-.Home img {
-    position: absolute;
-    top:1%;
-    left:50%;
-    transform: translateX(-50%);
-    width: 10vmax;
+.Contact .container a:hover {
+    color:rgb(58, 61, 71);
+    transform: scale(1.1);
 }
