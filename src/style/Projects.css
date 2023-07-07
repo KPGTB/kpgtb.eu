@@ -84,3 +84,16 @@
 .Projects .types button:last-child {
     border-right: none;
 }
+
+.Projects .list.fadeIn {
+    animation: fadeInAnim 1s ease-out;
+}
+
+@keyframes fadeInAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
