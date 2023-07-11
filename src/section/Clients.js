@@ -107,7 +107,7 @@ export default class Clients extends Component {
            this.topScroll = false
         })
 
-        await fetch("http://192.168.1.19:8000/109612846/reviews")
+        await fetch("https://fiverr-api.kpgtb.pl/reviews?id=109612846")
         .then(resp => resp.json())
         .then(json => this.setState({clients:json}))
     }

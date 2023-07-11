@@ -16,9 +16,9 @@ export default function Projects() {
                     I also have experience with JAVA, C# and LUA. Currently I learn ReactJS and Spring.
                 </p>
                 <div className='types'>
-                    <button onClick={() => setType("minecraft")}>Minecraft</button>
-                    <button onClick={() => setType("fivem")}>FiveM</button>
-                    <button disabled>Web</button>
+                    <button aria-label='minecraft' onClick={() => setType("minecraft")}>Minecraft</button>
+                    <button aria-label='fivem' onClick={() => setType("fivem")}>FiveM</button>
+                    <button aria-label='web' disabled>Web</button>
                 </div>
 
                 <MinecraftProjects visible={type==="minecraft"} />

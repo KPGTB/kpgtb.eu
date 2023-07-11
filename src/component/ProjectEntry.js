@@ -30,7 +30,7 @@ export default class ProjectEntry extends Component {
                             this.props.images.map(url => {
                                 let idx = this.props.images.indexOf(url)
                                 return (
-                                    <button className={idx === this.state.currentImageIdx ? "imgDot selected" : "imgDot"} key={idx} onClick={(el) => {
+                                    <button aria-label={"Next Image"} className={idx === this.state.currentImageIdx ? "imgDot selected" : "imgDot"} key={idx} onClick={(el) => {
                                         this.changeImageTo(idx)
                                     }}></button>
                                 )
