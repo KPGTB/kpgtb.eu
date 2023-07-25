@@ -36,6 +36,7 @@ export default function MinecraftProjects(props) {
                 ]} 
                 url="https://www.spigotmc.org/resources/klifesteal.110849/" 
                 />
+                <hr />
                 <ProjectEntry 
                     name="KLock" 
                     logo="https://www.spigotmc.org/data/resource_icons/111/111501.jpg?1690298528" 
