@@ -36,6 +36,16 @@ export default function MinecraftProjects(props) {
                 ]} 
                 url="https://www.spigotmc.org/resources/klifesteal.110849/" 
                 />
+                <ProjectEntry 
+                    name="KLock" 
+                    logo="https://www.spigotmc.org/data/resource_icons/111/111501.jpg?1690298528" 
+                    description="KLock is an advanced & modern minecraft plugin that adds lock and lock picking mechanic. With this plugin you can secure any open-able block with lock, and later you can only open it or break with key. Players can also craft a lock pick and open blocks without a key. It is done by simple opening minigame with custom UI. Server's staff can obtain the universal key (by command) to open every lock." 
+                    images={[
+                        "https://i.imgur.com/iWkPWc0.png",
+                        "https://i.imgur.com/lLLQgDv.png"
+                    ]} 
+                    url="https://www.spigotmc.org/resources/klock.111501/" 
+                />
             </div>
         :
             undefined
