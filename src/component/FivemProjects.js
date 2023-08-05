@@ -15,13 +15,13 @@ export default function FivemProjects(props) {
                 />
                 <hr />
                 <ProjectEntry 
-                    name="[ESX] KFines" 
+                    name="[ESX/QB] KFines" 
                     logo="https://i.imgur.com/2KmzFge.png" 
                     description="KFines is advanced Traffic Tickets system that allows creating tickets for players by cops, that can be paid later (by default, player needs to pay it in 3 days). If player don't pay ticket after configured time, script will take money with additional fee (by default 25%)." 
                     images={[
-                        "https://i.imgur.com/6CIKVM6.png"
+                        "https://i.imgur.com/LXGfW4c.png"
                     ]} 
-                    url="https://forum.cfx.re/t/free-esx-kfines-nice-traffic-tickets-with-option-to-pay-later/5155094" 
+                    url="https://forum.cfx.re/t/free-esx-qb-kfines-nice-traffic-tickets-with-option-to-pay-later/5155094" 
                 />
                 <hr />
                 <ProjectEntry 
