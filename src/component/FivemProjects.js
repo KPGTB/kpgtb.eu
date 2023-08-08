@@ -25,13 +25,13 @@ export default function FivemProjects(props) {
                 />
                 <hr />
                 <ProjectEntry 
-                    name="[ESX] KCrimeActivities" 
+                    name="[ESX/QB] KCrimeActivities" 
                     logo="https://i.imgur.com/3QzkhO6.png" 
                     description="KCrimeActivities is an advanced FiveM script that adds 3 new activities for (Car Thief, Truck Robbery, VIP Killing) that can be stared in a special tablet. Every activity has own levels (by default 3) that can be unlocked by EXP points (that can be gained by playing these games). Script also contains 3 hacking minigames that are used in Car Thief and Truck Robbery." 
                     images={[
-                        "https://i.imgur.com/j2rGumi.png"
+                        "https://i.imgur.com/6T9haYa.png"
                     ]} 
-                    url="https://forum.cfx.re/t/esx-paid-escrow-os-kcrimeactivities-new-3-activities-for-rp-crime/5156722" 
+                    url="https://forum.cfx.re/t/esx-qb-paid-escrow-os-kcrimeactivities-new-3-activities-for-rp-crime/5156722" 
                 />
             </div>
         :
