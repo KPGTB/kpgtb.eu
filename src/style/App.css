@@ -1,31 +1,30 @@
 * {
-    margin:0;
-    scroll-behavior: smooth;
+	margin: 0;
+	scroll-behavior: smooth;
 }
 
 html {
-    font-size: calc(0.6vmax + 7px);
+	font-size: calc(0.6vmax + 7px);
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    
-    font-weight: 400;
-    color: rgb(39, 41, 49);
-    background-color: rgb(255, 255, 255);
+	font-family: "Inter", sans-serif;
 
-    background-image: url('../img/bg.png');
-    background-size: cover;
-    background-position: left top;
-    background-repeat: no-repeat;
+	font-weight: 400;
+	color: rgb(39, 41, 49);
+	background-color: rgb(255, 255, 255);
 
+	background-image: url("../img/bg.png");
+	background-size: cover;
+	background-position: left top;
+	background-repeat: no-repeat;
 }
 
 button {
-    color: rgb(39, 41, 49);
-    cursor: pointer;
+	color: rgb(39, 41, 49);
+	cursor: pointer;
 }
 
 button:disabled {
-    cursor:auto;
+	cursor: auto;
 }

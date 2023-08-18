@@ -1,111 +1,110 @@
 .Clients {
-    width: 100%;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5vh;
+	width: 100%;
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5vh;
 }
 
-
 .Clients h1 {
-    font-weight: 900;
-    font-size: 2rem;
-    margin-left: 5vw;
+	font-weight: 900;
+	font-size: 2rem;
+	margin-left: 5vw;
 
-    background-color: #25a0db;
-    background-image: linear-gradient(45deg,#25a0db,#7abf48);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background-color: #25a0db;
+	background-image: linear-gradient(45deg, #25a0db, #7abf48);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .Clients p {
-    border-left: solid 0.4vmax rgb(39, 41, 49);
-    border-image-slice: 1;
-    border-image-source: linear-gradient(45deg,#25a0db,#7abf48);
+	border-left: solid 0.4vmax rgb(39, 41, 49);
+	border-image-slice: 1;
+	border-image-source: linear-gradient(45deg, #25a0db, #7abf48);
 
-    font-size: 1rem;
-    padding-left: 1vmax;
-    margin-left: 5vw;
+	font-size: 1rem;
+	padding-left: 1vmax;
+	margin-left: 5vw;
 }
 
 .Clients .container {
-    overflow-x: auto;
-    width: 100%;
-    min-height: 30vh;
-    max-height: 50vh;
+	overflow-x: auto;
+	width: 100%;
+	min-height: 30vh;
+	max-height: 50vh;
 
-    border-top: solid .22vmax;
-    border-bottom: solid .22vmax;
+	border-top: solid 0.22vmax;
+	border-bottom: solid 0.22vmax;
 
-    border-image-slice: 1;
-    border-image-source: linear-gradient(45deg,#25a0db,#7abf48);
+	border-image-slice: 1;
+	border-image-source: linear-gradient(45deg, #25a0db, #7abf48);
 
-    display: flex;
-    align-items: center;
-    gap: 5vw;
+	display: flex;
+	align-items: center;
+	gap: 5vw;
 }
 
 .Clients .container .client {
-    flex: 0 0 30%;
-    height: 80%;
+	flex: 0 0 30%;
+	height: 80%;
 
-    background-color: white;
-    border-radius: 45px;
-    box-shadow: 0 0 15px 3px black;
+	background-color: white;
+	border-radius: 45px;
+	box-shadow: 0 0 15px 3px black;
 }
 
 @media (max-width: 1000px) {
-    .Clients .container .client {
-        flex: 0 0 45%;
-    }
+	.Clients .container .client {
+		flex: 0 0 45%;
+	}
 }
 
 @media (max-width: 700px) {
-    .Clients .container .client {
-        flex: 0 0 100%;
-    }
+	.Clients .container .client {
+		flex: 0 0 100%;
+	}
 }
 
 .Clients .container .client .info {
-    display: flex;
-    align-items: flex-end;
-    gap: 5%;
-    padding: 3%;
+	display: flex;
+	align-items: flex-end;
+	gap: 5%;
+	padding: 3%;
 }
 
 .Clients .container .client .info img {
-    border: solid 3px rgb(39, 41, 49);
-    border-radius: 50%;
-    width: 3vw;
+	border: solid 3px rgb(39, 41, 49);
+	border-radius: 50%;
+	width: 3vw;
 }
 
 .Clients .container .client .info .data p {
-    font-weight: bold;
-    margin: 0;
-    border: none;
-    padding: 0;
+	font-weight: bold;
+	margin: 0;
+	border: none;
+	padding: 0;
 }
 
 .Clients .container .client .info .data p span,
 .Clients .container .client .description .descInfo {
-    font-weight: normal;
-    opacity: .75;
-    font-size: .75rem;
+	font-weight: normal;
+	opacity: 0.75;
+	font-size: 0.75rem;
 }
 
 .Clients .container .client .info .data .stars .gold {
-    color: gold;
+	color: gold;
 }
 
 .Clients .container .client .description {
-    padding: 2%;
-    height: 50%;
-    overflow-y: auto;
+	padding: 2%;
+	height: 50%;
+	overflow-y: auto;
 }
 
 .Clients ::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
+	display: none;
+	width: 0;
+	height: 0;
 }

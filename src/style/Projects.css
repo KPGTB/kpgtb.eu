@@ -1,99 +1,99 @@
 .Projects {
-    width: 100%;
-    min-height: 100dvh;
-    
-    display: flex;
-    justify-content: center;
+	width: 100%;
+	min-height: 100dvh;
+
+	display: flex;
+	justify-content: center;
 }
 
 .Projects .container {
-    margin-top: 10dvh;
-    width: 80%;
+	margin-top: 10dvh;
+	width: 80%;
 }
 
 .Projects h1 {
-    font-weight: 900;
-    display: inline-block;
-    font-size: 2.5rem;
-    margin-bottom: 2vmax;
+	font-weight: 900;
+	display: inline-block;
+	font-size: 2.5rem;
+	margin-bottom: 2vmax;
 
-    background-color: #25a0db;
-    background-image: linear-gradient(45deg,#25a0db,#7abf48);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background-color: #25a0db;
+	background-image: linear-gradient(45deg, #25a0db, #7abf48);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
-    border-bottom: solid 0.4vmax rgb(39, 41, 49);
-    border-image-slice: 1;
-    border-image-source: linear-gradient(45deg,#25a0db,#7abf48);
+	border-bottom: solid 0.4vmax rgb(39, 41, 49);
+	border-image-slice: 1;
+	border-image-source: linear-gradient(45deg, #25a0db, #7abf48);
 }
 
 .Projects p {
-    font-size: 1.33rem;
-    margin-bottom: 2vmax;
-    padding-left: 1vmax;
+	font-size: 1.33rem;
+	margin-bottom: 2vmax;
+	padding-left: 1vmax;
 
-    border-left: solid 0.4vmax rgb(39, 41, 49);
-    border-image-slice: 1;
-    border-image-source: linear-gradient(45deg,#25a0db,#7abf48);
+	border-left: solid 0.4vmax rgb(39, 41, 49);
+	border-image-slice: 1;
+	border-image-source: linear-gradient(45deg, #25a0db, #7abf48);
 }
 
 .Projects .list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5vmax;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5vmax;
 }
 
 .Projects .list hr {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(45deg,#25a0db,#7abf48);
-    width: calc(1/3 * 100%);
+	border-image-slice: 1;
+	border-image-source: linear-gradient(45deg, #25a0db, #7abf48);
+	width: calc(1 / 3 * 100%);
 }
 
 .Projects .types {
-    border: solid 3px #1c79bf;
-    border-radius: 1vmax;
-    padding-top: .5vmax;
-    padding-bottom: .5vmax;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left:50%;
-    transform: translateX(-50%);
-    margin-bottom: 2vmax;   
+	border: solid 3px #1c79bf;
+	border-radius: 1vmax;
+	padding-top: 0.5vmax;
+	padding-bottom: 0.5vmax;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 2vmax;
 }
 
 .Projects .types button {
-    background-color: transparent;
-    border: none;
-    text-align: center;
-    color: #25a0db;
-    font-weight: 700;
-    font-size: .75rem;
-    border-right: dashed .09vmax #1c79bf;
-    padding-inline: 1vmax;
+	background-color: transparent;
+	border: none;
+	text-align: center;
+	color: #25a0db;
+	font-weight: 700;
+	font-size: 0.75rem;
+	border-right: dashed 0.09vmax #1c79bf;
+	padding-inline: 1vmax;
 }
 
 .Projects .types button:disabled {
-    background-color:rgba(37, 160, 219,0.5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background-color: rgba(37, 160, 219, 0.5);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .Projects .types button:last-child {
-    border-right: none;
+	border-right: none;
 }
 
 .Projects .list.fadeIn {
-    animation: fadeInAnim 1s ease-out;
+	animation: fadeInAnim 1s ease-out;
 }
 
 @keyframes fadeInAnim {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
