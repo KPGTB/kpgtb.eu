@@ -1,5 +1,6 @@
 import {Component} from "react"
 import "../style/ProjectEntry.css"
+import {observer} from "../util/Observer"
 
 export default class ProjectEntry extends Component {
 	state = {
