@@ -28,3 +28,7 @@ button {
 button:disabled {
 	cursor: auto;
 }
+
+.showEntry {
+	opacity: 1;
+}

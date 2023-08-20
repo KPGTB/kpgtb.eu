@@ -13,6 +13,7 @@ export default function MinecraftProjects(props) {
 			<hr />
 			<ProjectEntry
 				name="KThirst"
+				mode="right"
 				logo="https://www.spigotmc.org/data/resource_icons/103/103387.jpg?1683375762"
 				description="KThirst is advanced & modern minecraft plugin. It adds new thirst mechanic with custom UI above food bar. By default, the plugin contains 2 drinks - Dirty & Clean Water. Players can use an empty bottle to get dirty water from any water source. After it, they can craft filter machine (which has custom UI) and clean this water.The server's administrators can create their own, custom drinks."
 				images={[
@@ -36,6 +37,7 @@ export default function MinecraftProjects(props) {
 			<hr />
 			<ProjectEntry
 				name="KLock"
+				mode="right"
 				logo="https://www.spigotmc.org/data/resource_icons/111/111501.jpg?1690298528"
 				description="KLock is an advanced & modern minecraft plugin that adds lock and lock picking mechanic. With this plugin you can secure any open-able block with lock, and later you can only open it or break with key. Players can also craft a lock pick and open blocks without a key. It is done by simple opening minigame with custom UI. Server's staff can obtain the universal key (by command) to open every lock."
 				images={[
