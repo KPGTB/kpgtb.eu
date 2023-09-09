@@ -23,7 +23,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          cd /home/www/public_html/portfolio/
+          cd /home/kpgtb/public_html/portfolio/
           git pull origin main
           git status
           npm install
