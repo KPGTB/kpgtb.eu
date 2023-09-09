@@ -26,5 +26,5 @@ jobs:
           cd /home/kpgtb/public_html/portfolio/
           sudo git pull origin main
           sudo git status
-          sudo npm install
+          sudo npm i
           sudo npm run build
