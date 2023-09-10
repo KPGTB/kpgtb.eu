@@ -27,6 +27,14 @@ export default function FivemProjects(props) {
 				images={["https://i.imgur.com/6T9haYa.png"]}
 				url="https://forum.cfx.re/t/esx-qb-paid-escrow-os-kcrimeactivities-new-3-activities-for-rp-crime/5156722"
 			/>
+			<hr />
+			<ProjectEntry
+				name="[ESX/QB] KExploration"
+				logo="https://i.imgur.com/S3kX0g7.png"
+				description="KExploration is a simple FiveM script that allows server’s staff to hide any place on map. Players can discover that place and save it on map."
+				images={["https://i.imgur.com/pWnPc0Q.png"]}
+				url="https://forum.cfx.re/t/esx-qb-kexploration-hide-any-place-on-map/5167773"
+			/>
 		</div>
 	) : undefined
 }
