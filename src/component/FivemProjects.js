@@ -30,6 +30,7 @@ export default function FivemProjects(props) {
 			<hr />
 			<ProjectEntry
 				name="[ESX/QB] KExploration"
+				mode="right"
 				logo="https://i.imgur.com/S3kX0g7.png"
 				description="KExploration is a simple FiveM script that allows server’s staff to hide any place on map. Players can discover that place and save it on map."
 				images={["https://i.imgur.com/pWnPc0Q.png"]}
