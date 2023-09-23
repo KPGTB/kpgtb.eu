@@ -10,6 +10,7 @@ const FivemProjects: FC<Props> = (props: Props) => {
 	return props.visible ? (
 		<div className={props.visible ? `${styles.list} fadeIn` : styles.list}>
 			<ProjectEntry
+				id="FivemReact"
 				name="FiveM + ReactJS Simple Template"
 				mode={ProjectMode.LEFT}
 				logo={"ReactTemplate"}
@@ -19,6 +20,7 @@ const FivemProjects: FC<Props> = (props: Props) => {
 			/>
 			<hr />
 			<ProjectEntry
+				id="KFines"
 				name="[ESX/QB] KFines"
 				mode={ProjectMode.RIGHT}
 				logo={"KFines"}
@@ -28,6 +30,7 @@ const FivemProjects: FC<Props> = (props: Props) => {
 			/>
 			<hr />
 			<ProjectEntry
+				id="KCrimeActivities"
 				name="[ESX/QB] KCrimeActivities"
 				mode={ProjectMode.LEFT}
 				logo={"KCrimeActivities"}
@@ -37,6 +40,7 @@ const FivemProjects: FC<Props> = (props: Props) => {
 			/>
 			<hr />
 			<ProjectEntry
+				id="KExploration"
 				name="[ESX/QB] KExploration"
 				mode={ProjectMode.RIGHT}
 				logo={"KExploration"}

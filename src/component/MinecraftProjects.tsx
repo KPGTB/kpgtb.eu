@@ -10,6 +10,7 @@ const MinecraftProjects: FC<Props> = (props: Props) => {
 	return props.visible ? (
 		<div className={props.visible ? `${styles.list} fadeIn` : styles.list}>
 			<ProjectEntry
+				id="KTools"
 				name="KTools"
 				mode={ProjectMode.LEFT}
 				logo={"KTools"}
@@ -19,6 +20,7 @@ const MinecraftProjects: FC<Props> = (props: Props) => {
 			/>
 			<hr />
 			<ProjectEntry
+				id="KThirst"
 				name="KThirst"
 				mode={ProjectMode.RIGHT}
 				logo={"KThirst"}
@@ -28,6 +30,7 @@ const MinecraftProjects: FC<Props> = (props: Props) => {
 			/>
 			<hr />
 			<ProjectEntry
+				id="KLifesteal"
 				name="KLifesteal"
 				mode={ProjectMode.LEFT}
 				logo={"KLifesteal"}
@@ -37,6 +40,7 @@ const MinecraftProjects: FC<Props> = (props: Props) => {
 			/>
 			<hr />
 			<ProjectEntry
+				id="KLock"
 				name="KLock"
 				mode={ProjectMode.RIGHT}
 				logo={"KLock"}

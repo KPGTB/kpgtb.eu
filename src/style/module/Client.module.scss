@@ -7,6 +7,7 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: 5vh;
+	gap: 5dvh;
 }
 
 .title {
@@ -29,6 +30,7 @@
 	padding-left: 1vmax;
 	margin-left: 5vw;
 	margin-bottom: 5vh;
+	margin-bottom: 5dvh;
 }
 
 .reviews {
@@ -55,6 +57,7 @@
 	@media (max-width: 550px) {
 		flex-direction: column;
 		gap: 3vh;
+		gap: 3dvh;
 	}
 
 	opacity: 0;
@@ -140,7 +143,9 @@
 
 	width: calc(1 / 5 * 100%);
 	margin-top: 5vh;
+	margin-top: 5dvh;
 	margin-bottom: 5vh;
+	margin-bottom: 5dvh;
 	border-image-source: linear-gradient(45deg, #25a0db, #7abf48, #25a0db);
 
 	@media (max-width: 550px) {
@@ -152,7 +157,9 @@
 	width: 100%;
 	position: relative;
 	margin-top: 5vh;
+	margin-top: 5dvh;
 	margin-bottom: 5vh;
+	margin-bottom: 5dvh;
 }
 
 .more {

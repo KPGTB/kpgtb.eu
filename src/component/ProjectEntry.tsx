@@ -11,6 +11,7 @@ enum ProjectMode {
 }
 
 type ProjectProps = {
+	id: string
 	mode: ProjectMode
 	logo: string
 	name: string
@@ -102,6 +103,7 @@ export default class ProjectEntry extends Component<
 					onClick={() => {
 						window.open(this.state.currentImageUrl, "_blank")
 					}}
+					className={`${this.props.id}ImgGallery`}
 				/>
 				<div className={styles.imgDots}>
 					{this.props.images.length > 1
@@ -128,8 +130,6 @@ export default class ProjectEntry extends Component<
 		)
 	}
 
-	imagesInterval: NodeJS.Timer | undefined = undefined
-
 	changeImage() {
 		let idx = this.state.currentImageIdx
 		idx++
@@ -148,14 +148,17 @@ export default class ProjectEntry extends Component<
 
 	componentDidMount() {
 		this.changeImage()
-		this.imagesInterval = setInterval(this.changeImage.bind(this), 5000)
 		observer.observe(this.ref.current)
+		document
+			.querySelectorAll(`.${this.props.id}ImgGallery`)
+			.forEach((el) => {
+				el.addEventListener("animationiteration", () => {
+					this.changeImage()
+				})
+			})
 	}
 
 	componentWillUnmount() {
-		if (this.imagesInterval !== undefined) {
-			clearInterval(this.imagesInterval)
-		}
 		observer.unobserve(this.ref.current)
 	}
 }
