@@ -1,9 +1,12 @@
 import {Component, createRef} from "react"
-import {observer} from "../util/Observer"
-import styles from "../style/module/ProjectEntry.module.scss"
-import WebpImg from "../util/WebpImg.js"
-import logo from "../img/project/logo/Logo"
+
+import {Icon} from "@iconify/react"
+
 import gallery from "../img/project/gallery/Gallery"
+import logo from "../img/project/logo/Logo"
+import styles from "../style/module/ProjectEntry.module.scss"
+import {observer} from "../util/Observer"
+import WebpImg from "../util/WebpImg"
 
 enum ProjectMode {
 	LEFT,
@@ -18,11 +21,12 @@ type ProjectProps = {
 	description: string
 	url: string
 	images: string[]
+	github?: string
+	technologies?: string[]
 }
 
 type ProjectState = {
 	currentImageIdx: number
-	currentImageUrl: string
 }
 
 export {ProjectMode}
@@ -32,7 +36,6 @@ export default class ProjectEntry extends Component<
 > {
 	state: ProjectState = {
 		currentImageIdx: -1,
-		currentImageUrl: "",
 	}
 
 	ref: React.RefObject<any> = createRef()
@@ -46,7 +49,7 @@ export default class ProjectEntry extends Component<
 				ref={this.ref}
 			>
 				{this.props.mode === ProjectMode.RIGHT &&
-				window.innerWidth > 550 ? (
+				window.innerWidth > 1050 ? (
 					<>
 						<this.Images />
 						<this.Info />
@@ -74,37 +77,68 @@ export default class ProjectEntry extends Component<
 					/>
 					<p className={styles.name}>{this.props.name}</p>
 				</div>
+				{this.props.technologies && (
+					<div className={styles.technologies}>
+						{this.props.technologies.map((icon) => {
+							return (
+								<Icon
+									icon={icon}
+									key={icon}
+								/>
+							)
+						})}
+					</div>
+				)}
+
 				<p className={styles.description}>{this.props.description}</p>
-				<a
-					href={this.props.url}
-					target="blank"
-					className={styles.link}
-				>
-					Check it!
-				</a>
+
+				<div className={styles.buttons}>
+					<a
+						href={this.props.url}
+						target="blank"
+						className={styles.link}
+					>
+						Check it!
+					</a>
+
+					{this.props.github && (
+						<a
+							href={this.props.github}
+							target="blank"
+							className={styles.link}
+						>
+							Source Code
+						</a>
+					)}
+				</div>
 			</div>
 		)
 	}
 
 	Images: React.FC = () => {
 		return (
-			<div
-				className={
-					styles.images +
-					(this.props.images.length > 1 ? " " + styles.anim : "")
-				}
-			>
-				<WebpImg
-					// @ts-ignore
-					src={gallery[this.state.currentImageUrl + "Webp"]}
-					// @ts-ignore
-					fallback={gallery[this.state.currentImageUrl]}
-					alt={this.props.name + " image"}
-					onClick={() => {
-						window.open(this.state.currentImageUrl, "_blank")
-					}}
-					className={`${this.props.id}ImgGallery`}
-				/>
+			<div className={styles.images}>
+				{this.props.images.map((img, idx) => {
+					return (
+						<WebpImg
+							// @ts-ignore
+							src={gallery[img + "Webp"]}
+							// @ts-ignore
+							fallback={gallery[img]}
+							alt={this.props.name + " image"}
+							onClick={() => {
+								// @ts-ignore
+								window.open(gallery[img], "_blank")
+							}}
+							aria-hidden={this.state.currentImageIdx !== idx}
+							style={{
+								translate:
+									this.state.currentImageIdx * -100 + "%",
+							}}
+						/>
+					)
+				})}
+
 				<div className={styles.imgDots}>
 					{this.props.images.length > 1
 						? this.props.images.map((url) => {
@@ -142,23 +176,21 @@ export default class ProjectEntry extends Component<
 	changeImageTo(idx: number) {
 		this.setState({
 			currentImageIdx: idx,
-			currentImageUrl: this.props.images[idx],
 		})
 	}
+
+	slidesInterval?: NodeJS.Timer = undefined
 
 	componentDidMount() {
 		this.changeImage()
 		observer.observe(this.ref.current)
-		document
-			.querySelectorAll(`.${this.props.id}ImgGallery`)
-			.forEach((el) => {
-				el.addEventListener("animationiteration", () => {
-					this.changeImage()
-				})
-			})
+		this.slidesInterval = setInterval(this.changeImage.bind(this), 5000)
 	}
 
 	componentWillUnmount() {
 		observer.unobserve(this.ref.current)
+		if (this.slidesInterval !== undefined) {
+			clearInterval(this.slidesInterval)
+		}
 	}
 }

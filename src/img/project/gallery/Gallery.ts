@@ -1,6 +1,9 @@
 const images = {
 	// PNG
 
+	// WEB
+	SimpleBlog: require("./SimpleBlog.png"),
+
 	// MINECRAFT
 	KTools: require("./KTools.png"),
 	KThirst: require("./KThirst.png"),
@@ -17,6 +20,9 @@ const images = {
 	ReactTemplate: require("./ReactTemplate.png"),
 
 	// WEBP
+
+	// WEB
+	SimpleBlogWebp: require("./SimpleBlog.webp"),
 
 	// MINECRAFT
 	KToolsWebp: require("./KTools.webp"),

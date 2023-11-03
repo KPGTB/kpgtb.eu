@@ -1,10 +1,12 @@
 import {Component} from "react"
+
 import {Icon} from "@iconify/react"
-import styles from "../style/module/Client.module.scss"
+
 import clientIMG from "../img/client.png"
 import clientIMGWebp from "../img/client.webp"
+import styles from "../style/module/Client.module.scss"
 import {observer} from "../util/Observer"
-import WebpImg from "../util/WebpImg.js"
+import WebpImg from "../util/WebpImg"
 
 type State = {
 	clients: Client[] | undefined

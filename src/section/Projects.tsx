@@ -1,7 +1,9 @@
 import {FC, useState} from "react"
-import styles from "../style/module/Projects.module.scss"
-import MinecraftProjects from "../component/MinecraftProjects"
+
 import FivemProjects from "../component/FivemProjects"
+import MinecraftProjects from "../component/MinecraftProjects"
+import WebProjects from "../component/WebProjects"
+import styles from "../style/module/Projects.module.scss"
 
 enum ProjectType {
 	MINECRAFT,
@@ -10,7 +12,7 @@ enum ProjectType {
 }
 
 const Projects: FC = () => {
-	const [type, setType] = useState(ProjectType.MINECRAFT)
+	const [type, setType] = useState(ProjectType.WEB)
 
 	return (
 		<div
@@ -22,9 +24,16 @@ const Projects: FC = () => {
 				<p className={styles.description}>
 					I have over 4 years of experience with Front-End languages
 					like HTML, CSS and JS. I also have experience with JAVA, C#
-					and LUA. Currently I learn ReactJS and Spring.
+					and LUA. Currently I learn NextJS with bunch of new
+					technologies.
 				</p>
 				<div className={styles.types}>
+					<button
+						aria-label="web"
+						onClick={() => setType(ProjectType.WEB)}
+					>
+						Web
+					</button>
 					<button
 						aria-label="minecraft"
 						onClick={() => setType(ProjectType.MINECRAFT)}
@@ -37,16 +46,11 @@ const Projects: FC = () => {
 					>
 						FiveM
 					</button>
-					<button
-						aria-label="web"
-						disabled
-					>
-						Web
-					</button>
 				</div>
 
 				<MinecraftProjects visible={type === ProjectType.MINECRAFT} />
 				<FivemProjects visible={type === ProjectType.FIVEM} />
+				<WebProjects visible={type === ProjectType.WEB} />
 			</div>
 		</div>
 	)

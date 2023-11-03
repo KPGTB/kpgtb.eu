@@ -1,8 +1,9 @@
 import {FC} from "react"
+
 import logo from "../img/logo.png"
 import logoWebp from "../img/logo.webp"
 import styles from "../style/module/Home.module.scss"
-import WebpImg from "../util/WebpImg.js"
+import WebpImg from "../util/WebpImg"
 
 const Home: FC = () => {
 	return (
