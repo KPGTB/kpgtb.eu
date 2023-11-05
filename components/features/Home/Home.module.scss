@@ -1,0 +1,37 @@
+@use "/assets/settings.scss";
+
+.container {
+	@include settings.flex(column, center, center);
+	@include settings.useWebpBackground("/line.png", "/line.webp");
+
+	text-align: center;
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+.logo {
+	position: absolute;
+	top: 1%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 10vmax;
+	height: auto;
+}
+
+.info {
+	width: 80%;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.nick {
+	@include settings.textGradient(45deg, settings.$lightBlue, settings.$green);
+}
+
+.button {
+	padding: 0.5vh 3vmax !important;
+	padding: 0.5dvh 3vmax !important;
+	font-size: 2rem !important;
+}

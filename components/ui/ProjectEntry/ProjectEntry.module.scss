@@ -1,0 +1,112 @@
+@use "/assets/settings.scss";
+
+.container {
+	width: 100%;
+	opacity: 0;
+
+	&:global(.show) {
+		opacity: 1;
+	}
+
+	@include settings.flex(row, space-between, stretch);
+
+	@media (max-width: 1050px) {
+		@include settings.flex(column, center, center);
+		gap: 5vmax;
+	}
+}
+
+.info {
+	width: 45%;
+	font-size: 1.5rem;
+	order: 1;
+
+	@include settings.flex(column, space-around, flex-start);
+
+	@media (max-width: 1050px) {
+		width: 100%;
+		gap: 2.5vmax;
+	}
+
+	@media (min-width: 1050px) {
+		&.right {
+			order: 2;
+		}
+	}
+
+	& > * {
+		width: 100%;
+	}
+}
+
+.technologies {
+	justify-content: space-around !important;
+}
+
+.technology {
+	font-size: 2rem;
+}
+
+.title {
+	gap: 5vmax;
+	font-weight: 700;
+
+	@include settings.flex(row, flex-start, center);
+
+	img {
+		width: 10%;
+		height: auto;
+	}
+}
+
+.name {
+	border-left: solid 5px settings.$lightBlue;
+	padding-left: 2%;
+	font-size: 1.5rem;
+}
+
+.description {
+	font-size: 1rem;
+}
+
+.buttons {
+	display: flex;
+	gap: 1vw;
+}
+
+.link {
+	width: 20% !important;
+	padding: 0.5% 1% !important;
+	font-size: 1rem !important;
+
+	@media (max-width: 1300px) {
+		width: 40% !important;
+	}
+
+	@media (max-width: 1050px) {
+		width: auto !important;
+	}
+}
+
+.images {
+	width: 45%;
+	height: 100%;
+	order: 2;
+
+	border: solid 0.22vmax transparent;
+	@include settings.borderGradient(
+		45deg,
+		settings.$lightBlue,
+		settings.$blue
+	);
+
+	@media (min-width: 1050px) {
+		&.right {
+			order: 1;
+		}
+	}
+
+	@media (max-width: 1050px) {
+		width: 100%;
+	}
+}

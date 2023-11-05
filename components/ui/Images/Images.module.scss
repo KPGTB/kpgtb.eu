@@ -1,0 +1,50 @@
+@use "/assets/settings.scss";
+
+.container {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		flex: 0 0;
+
+		transition: translate 0.5s;
+	}
+}
+
+.dots {
+	position: absolute;
+	bottom: 1vmax;
+	left: 50%;
+	transform: translateX(-50%);
+
+	gap: 0.5vmax;
+	@include settings.flex(row, center, center);
+}
+
+.dot {
+	all: unset;
+
+	width: 1vmax;
+	height: 1vmax;
+
+	background-color: settings.$lightBlue;
+	border: solid 0.2vmax settings.$blue;
+	border-radius: 50%;
+
+	cursor: pointer;
+	position: relative;
+
+	@media (max-width: 1050px) {
+		width: 1.5vmax;
+		height: 1.5vmax;
+	}
+
+	&.selected {
+		background-color: settings.$green !important;
+		border-color: darken(settings.$green, 20%) !important;
+	}
+}

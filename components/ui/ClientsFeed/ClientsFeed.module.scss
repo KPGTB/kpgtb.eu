@@ -1,0 +1,83 @@
+@use "/assets/settings.scss";
+
+.container {
+	width: 100%;
+
+	@include settings.flex(column, flex-start, center);
+}
+
+.hr {
+	width: calc(1 / 5 * 100%);
+
+	margin: 5vh 0;
+	margin: 5dvh 0;
+
+	@media (max-width: 550px) {
+		width: calc(3 / 5 * 100%);
+	}
+
+	@include settings.borderGradient(
+		45deg,
+		settings.$lightBlue,
+		settings.$green,
+		settings.$lightBlue
+	);
+}
+
+.moreContainer {
+	width: 100%;
+
+	margin: 5vh 0;
+	margin: 5dvh 0;
+
+	position: relative;
+}
+
+.more {
+	width: 80%;
+
+	border-bottom: solid 2px settings.$lightBlue;
+	@include settings.borderGradient(
+		45deg,
+		settings.$lightBlue,
+		settings.$green,
+		settings.$lightBlue
+	);
+	@include settings.center();
+}
+
+.moreBTT {
+	all: unset;
+	width: 1.5vmax;
+	height: 1.5vmax;
+
+	border: solid 2px settings.$green;
+	border-radius: 50%;
+
+	background-color: white;
+
+	&:hover ~ .moreOverlay {
+		opacity: 1;
+		top: -2rem;
+	}
+
+	@media (max-width: 550px) {
+		width: 3vmax;
+		height: 3vmax;
+	}
+
+	@include settings.center();
+	@include settings.flex(row, center, center);
+}
+
+.moreOverlay {
+	pointer-events: none;
+	transition: all ease-out 0.2s;
+	opacity: 0;
+
+	font-size: 1.5rem;
+	color: settings.$lightBlue;
+
+	@include settings.center();
+	top: -50%;
+}

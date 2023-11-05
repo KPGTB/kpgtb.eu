@@ -1,0 +1,101 @@
+@use "/assets/settings.scss";
+
+.container {
+	width: 100%;
+
+	@include settings.flex(column, flex-start, center);
+}
+
+.client {
+	width: 80%;
+
+	@media (max-width: 550px) {
+		flex-direction: column !important;
+		gap: 3vh;
+		gap: 3dvh;
+	}
+
+	opacity: 0;
+	&:global(.show) {
+		opacity: 1;
+	}
+
+	@include settings.flex(row, space-between, flex-start);
+}
+
+.info {
+	order: 1;
+	width: 30%;
+	height: 100%;
+
+	@media (min-width: 550px) {
+		&.right {
+			order: 2;
+		}
+	}
+
+	@media (max-width: 550px) {
+		width: 100%;
+	}
+
+	@include settings.flex(column, center, center);
+}
+
+.image {
+	width: 20%;
+	border: solid 3px settings.$text;
+	border-radius: 50%;
+}
+
+.data {
+	font-weight: bold;
+	margin: 0;
+	border: none;
+	padding: 0;
+}
+
+.extra {
+	width: 100%;
+	font-weight: normal;
+	opacity: 0.75;
+	font-size: 0.75rem;
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+}
+
+.gold {
+	color: yellow;
+}
+
+.review {
+	width: 70%;
+	order: 2;
+
+	@media (min-width: 550px) {
+		&.right {
+			order: 1;
+		}
+	}
+
+	@media (max-width: 550px) {
+		width: 100%;
+		text-align: center !important;
+	}
+
+	@include settings.flex(column, center, flex-start);
+}
+
+.content {
+	width: 100%;
+}
+
+.left {
+	text-align: left !important;
+}
+
+.right {
+	text-align: right !important;
+}

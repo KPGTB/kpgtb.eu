@@ -1,0 +1,67 @@
+@use "/assets/settings.scss";
+
+.container {
+	text-align: center;
+	gap: 5vmax;
+
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+
+	@include settings.flex(column, center, center);
+	@include settings.useWebpBackground("/line.png", "/line.webp");
+}
+
+.title {
+	font-size: 5rem;
+	font-weight: bold !important;
+
+	@include settings.textGradient(45deg, settings.$lightBlue, settings.$green);
+}
+
+.contact {
+	width: 100%;
+
+	@include settings.flex(row, space-around, flex-start);
+
+	a {
+		all: unset;
+		cursor: pointer;
+
+		font-size: 4rem;
+		text-align: center;
+
+		color: settings.$text;
+		transition: all 0.1s linear;
+
+		@include settings.flex(column, center, center);
+		&:hover {
+			color: lighten(settings.$text, 10);
+			transform: scale(1.1);
+		}
+	}
+}
+
+.discord {
+	position: relative;
+	&:hover > .discordOverlay {
+		opacity: 1;
+		top: -1rem;
+	}
+}
+
+.discordOverlay {
+	pointer-events: none;
+	transition: all ease-out 0.2s;
+	opacity: 0;
+
+	position: absolute;
+	top: -50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	font-size: 1.5rem;
+	font-weight: bold;
+
+	@include settings.textGradient(45deg, settings.$lightBlue, settings.$green);
+}

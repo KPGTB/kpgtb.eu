@@ -1,0 +1,20 @@
+@use "/assets/settings.scss";
+
+.button {
+	all: unset;
+
+	border: solid 0.22vmax settings.$blue;
+	border-radius: 1.5vmax;
+	color: settings.$blue;
+
+	font-weight: 700;
+
+	cursor: pointer;
+	text-align: center;
+
+	&:hover {
+		border-color: settings.$lightBlue;
+		color: settings.$lightBlue;
+		transform: scale(1.05);
+	}
+}

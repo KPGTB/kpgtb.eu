@@ -1,0 +1,10 @@
+@use "/assets/settings.scss";
+
+.technologies {
+	flex-wrap: wrap;
+	@include settings.flex(row, flex-start, center);
+}
+
+.technology {
+	opacity: 0.8;
+}
