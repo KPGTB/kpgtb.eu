@@ -1,6 +1,6 @@
 "use client"
 
-import {useState} from "react"
+import React, {useState} from "react"
 import {FiMoreHorizontal} from "react-icons/fi"
 
 import {freehand} from "@/app/font"
@@ -18,11 +18,11 @@ const ClientsFeed = ({clients}: {clients: Client[]}) => {
 		<section className={styles.container}>
 			{clients.map((client, idx) => {
 				if (idx >= show) {
-					return <></>
+					return <React.Fragment key={idx}></React.Fragment>
 				}
 
 				return (
-					<>
+					<React.Fragment key={`unique ${idx}`}>
 						<ClientComponent
 							mode={
 								idx % 2 === 0
@@ -30,13 +30,9 @@ const ClientsFeed = ({clients}: {clients: Client[]}) => {
 									: ProjectMode.RIGHT
 							}
 							client={client}
-							key={client.id}
 						/>
 						{idx + 1 === show && clients.length > idx + 1 ? (
-							<section
-								className={styles.moreContainer}
-								key={idx}
-							>
+							<section className={styles.moreContainer}>
 								<section className={styles.more}></section>
 								<button
 									aria-label={"Show More"}
@@ -55,12 +51,9 @@ const ClientsFeed = ({clients}: {clients: Client[]}) => {
 								</section>
 							</section>
 						) : (
-							<hr
-								className={styles.hr}
-								key={idx}
-							/>
+							<hr className={styles.hr} />
 						)}
-					</>
+					</React.Fragment>
 				)
 			})}
 		</section>

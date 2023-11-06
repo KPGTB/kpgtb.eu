@@ -1,5 +1,3 @@
-import {Suspense} from "react"
-
 import Clients from "@/components/features/Clients/Clients"
 import Contact from "@/components/features/Contact/Contact"
 import Home from "@/components/features/Home/Home"
@@ -11,9 +9,7 @@ const Page = () => {
 			<Home />
 			<Projects />
 			<Contact />
-			<Suspense fallback={<p>Loading...</p>}>
-				<Clients />
-			</Suspense>
+			<Clients />
 		</main>
 	)
 }

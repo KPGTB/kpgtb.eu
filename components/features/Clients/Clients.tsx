@@ -1,5 +1,8 @@
+import {Suspense} from "react"
+
 import {getReviews} from "@/app/api/reviews/route"
 import ClientsFeed from "@/components/ui/ClientsFeed/ClientsFeed"
+import ClientsLoading from "@/components/ui/ClientsFeed/ClientsLoading"
 
 import styles from "./Clients.module.scss"
 import {Client} from "./ClientTypes"
@@ -11,8 +14,7 @@ const getData = async () => {
 	return json
 }
 
-const Clients = async () => {
-	const reviews: Client[] = await getData()
+const Clients = () => {
 	return (
 		<article className={styles.container}>
 			<h1 className={styles.title}>What people think about me</h1>
@@ -21,9 +23,16 @@ const Clients = async () => {
 				Minecraft Plugins, since January 2023. Here are some reviews
 				about me.
 			</p>
-			<ClientsFeed clients={reviews} />
+			<Suspense fallback={<ClientsLoading />}>
+				<Reviews />
+			</Suspense>
 		</article>
 	)
+}
+
+const Reviews = async () => {
+	const data: Client[] = await getData()
+	return <ClientsFeed clients={data} />
 }
 
 export default Clients
