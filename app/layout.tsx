@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 		title: title,
 		description: description,
 		siteName: title,
-		images: "/logo.webp",
+		images: "/logo.png",
 	},
 }
 
