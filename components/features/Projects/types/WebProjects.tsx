@@ -17,7 +17,7 @@ const WebProjects = ({visible}: {visible: boolean}) => {
 					name="Simple Blog"
 					mode={ProjectMode.LEFT}
 					logo={"/logo.webp"}
-					description="Simple blog website that supports authentication, email verification, handy article editor and much more."
+					description="Simple Blog is a web application that works like blog. It is created using NextJS and handles authentication, email verification, handy articles editor and much more."
 					images={["/projects/SimpleBlog.webp"]}
 					links={[
 						{
