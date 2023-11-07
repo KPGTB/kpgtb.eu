@@ -20,7 +20,7 @@
 		opacity: 1;
 	}
 
-	@include settings.flex(row, space-between, flex-start);
+	@include settings.flex(row, space-between, center);
 }
 
 .info {
