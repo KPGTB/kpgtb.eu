@@ -76,6 +76,21 @@ const MinecraftProjects = ({visible}: {visible: boolean}) => {
 						},
 					]}
 				/>
+				<hr />
+				<ProjectEntry
+					id="KSkinCreator"
+					name="KSkinCreator"
+					mode={ProjectMode.LEFT}
+					logo={"/projects/logo/KSkinCreator.webp"}
+					description="KSkinCreator is an advanced minecraft plugin, that adds possibility to create entire, realistic minecraft skin, from various elements like clothes, hairs, skin color etc. This plugin tries to simulate creating character appearance from games like FiveM"
+					images={["/projects/KSkinCreator.webp"]}
+					links={[
+						{
+							href: "https://www.spigotmc.org/resources/kskincreator-make-your-rp-server-more-realistic.113984/",
+							label: "Read More",
+						},
+					]}
+				/>
 			</section>
 		)
 	)

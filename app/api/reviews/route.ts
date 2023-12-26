@@ -43,6 +43,16 @@ export const getReviews = async (id: string) => {
 
 	const json = await res.json()
 	const reviews = json.reviews
+
+	if (reviews === undefined) {
+		const file = await fs.readFile(
+			process.cwd() + "/assets/cache.json",
+			"utf-8"
+		)
+		const json = await JSON.parse(file)
+		return json
+	}
+
 	await fs.writeFile(
 		process.cwd() + "/assets/cache.json",
 		JSON.stringify(reviews),
