@@ -28,7 +28,10 @@ const Layout = ({children}: {children: React.ReactNode}) => {
 		<html lang="en">
 			<body className={inter.className}>
 				{children}
-				<footer>KPG-TB 2023 &copy; All rights reserved</footer>
+				<footer>
+					KPG-TB 2023 - {new Date().getFullYear()} &copy; All rights
+					reserved
+				</footer>
 			</body>
 		</html>
 	)
