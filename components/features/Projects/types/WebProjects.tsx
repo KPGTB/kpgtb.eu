@@ -21,7 +21,7 @@ const WebProjects = ({visible}: {visible: boolean}) => {
 					images={["/projects/SimpleBlog.webp"]}
 					links={[
 						{
-							href: "https://simpleblog.kpgtb.pl/",
+							href: "https://simpleblog.kpgtb.eu/",
 							label: "Preview",
 						},
 						{
@@ -34,6 +34,30 @@ const WebProjects = ({visible}: {visible: boolean}) => {
 						{icon: SiTypescript},
 						{icon: SiSass},
 						{icon: SiMongodb},
+					]}
+				/>
+				<hr />
+				<ProjectEntry
+					id="smtp_sender"
+					name="SMTP Sender"
+					mode={ProjectMode.RIGHT}
+					logo={"/logo.webp"}
+					description="SMTP Sender App is a simple web application that allows to connect with SMTP server and send mails using it. That application provides a simple UI with content editor to make sure that UX is good enough."
+					images={["/projects/SmtpSender.webp"]}
+					links={[
+						{
+							href: "https://smtp.kpgtb.eu/",
+							label: "Preview",
+						},
+						{
+							href: "https://github.com/KPGTB/smtp-sender",
+							label: "Source Code",
+						},
+					]}
+					technologies={[
+						{icon: SiNextdotjs},
+						{icon: SiTypescript},
+						{icon: SiSass},
 					]}
 				/>
 			</section>
