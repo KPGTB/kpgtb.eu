@@ -49,6 +49,10 @@ const ProjectEntry = (props: ProjectProps) => {
 					/>
 				)}
 
+				{props.extraInfo && (
+					<p className={styles.extraInfo}>{props.extraInfo}</p>
+				)}
+
 				<p className={styles.description}>{props.description}</p>
 
 				<section className={styles.buttons}>

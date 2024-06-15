@@ -20,6 +20,7 @@ export type ProjectProps = {
 	logo: string
 	name: string
 	description: string
+	extraInfo?: string
 	images: string[]
 	links: ButtonType[]
 	technologies?: TechnologyType[]

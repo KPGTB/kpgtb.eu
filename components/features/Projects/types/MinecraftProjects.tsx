@@ -11,6 +11,47 @@ const MinecraftProjects = ({visible}: {visible: boolean}) => {
 				className={classesToClass(styles.list, visible ? "fadeIn" : "")}
 			>
 				<ProjectEntry
+					id="BattlePass"
+					name="BattlePass"
+					mode={ProjectMode.LEFT}
+					logo={"/projects/logo/battlepass.webp"}
+					description="With BattlePass, create your own quests and earn experience and customizable rewards, keeping players active and engaged. With both free and premium passes available, you can offer a unique experience to all your players. Increase player retention and engagement with BattlePass, the must-have Minecraft quests plugin for any server owner."
+					extraInfo="Official Contributor"
+					images={[
+						"/projects/battlepass.webp",
+						"/projects/battlepass2.webp",
+						"/projects/battlepass3.gif",
+					]}
+					links={[
+						{
+							href: "https://www.spigotmc.org/resources/1-17-1-21-%E2%AD%90-battlepass-%E2%AD%90-50-quests-with-unlimited-customisable-quests-%E2%9A%94%EF%B8%8F-gui-editor-%E2%AD%90.63076/",
+							label: "Read More",
+						},
+					]}
+				/>
+				<hr />
+				<ProjectEntry
+					id="AdvancedJobs"
+					name="AdvancedJobs"
+					mode={ProjectMode.RIGHT}
+					logo={"/projects/logo/jobs.webp"}
+					description="AdvancedJobs is the ultimate Spigot Jobs Plugin that allows you to create your own custom jobs without any programming knowledge. With Daily refreshing jobs, free & premium passes and In-Game editor, this is the best jobs plugin for Spigot servers.
+					Bring an eco friendly approach and a reborn gameplay experience to your server."
+					extraInfo="Official Contributor"
+					images={[
+						"/projects/jobs.webp",
+						"/projects/jobs2.webp",
+						"/projects/jobs3.gif",
+					]}
+					links={[
+						{
+							href: "https://www.spigotmc.org/resources/1-17-1-21-%E2%AD%95-advancedjobs-%E2%AD%90-20-default-jobs-create-your-own-jobs-plugin%E2%9A%A1gui-editor-%E2%9C%85.114936/",
+							label: "Read More",
+						},
+					]}
+				/>
+				<hr />
+				<ProjectEntry
 					id="KTools"
 					name="KTools"
 					mode={ProjectMode.LEFT}

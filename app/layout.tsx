@@ -12,10 +12,10 @@ const description =
 export const metadata: Metadata = {
 	title: title,
 	description: description,
-	metadataBase: new URL("https://kpgtb.pl"),
+	metadataBase: new URL("https://kpgtb.eu"),
 	openGraph: {
 		type: "website",
-		url: "https://kpgtb.pl",
+		url: "https://kpgtb.eu",
 		title: title,
 		description: description,
 		siteName: title,

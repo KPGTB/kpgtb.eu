@@ -19,9 +19,8 @@ const Clients = () => {
 		<article className={styles.container}>
 			<h1 className={styles.title}>What people think about me</h1>
 			<p className={styles.description}>
-				I&apos;ve been working in Fiverr as a Freelancer, making
-				Minecraft Plugins, since January 2023. Here are some reviews
-				about me.
+				In 2023, I&apos;ve been working in Fiverr as a Freelancer,
+				making Minecraft Plugins. Here are some reviews about me.
 			</p>
 			<Suspense fallback={<ClientsLoading />}>
 				<Reviews />

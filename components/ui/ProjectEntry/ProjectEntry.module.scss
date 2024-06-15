@@ -74,6 +74,13 @@
 	gap: 1vw;
 }
 
+.extraInfo {
+	font-weight: 200;
+	font-style: italic;
+	font-size: 0.75rem;
+	@include settings.textGradient(45deg, settings.$lightBlue, settings.$green);
+}
+
 .link {
 	width: 20% !important;
 	padding: 0.5% 1% !important;
