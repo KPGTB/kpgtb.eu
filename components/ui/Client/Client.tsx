@@ -3,7 +3,7 @@
 import {useEffect, useRef} from "react"
 import {FaStar} from "react-icons/fa"
 
-import {Client} from "@/components/features/Clients/ClientTypes"
+import type {Client} from "@/components/features/Clients/ClientTypes"
 import {classesToClass} from "@/utils/convert"
 
 import {ProjectMode} from "../ProjectEntry/ProjectEntryTypes"
