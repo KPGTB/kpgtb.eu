@@ -1,8 +1,8 @@
 import {Suspense} from "react"
 
-import {getReviews} from "@/app/api/reviews/route"
 import ClientsFeed from "@/components/ui/ClientsFeed/ClientsFeed"
 import ClientsLoading from "@/components/ui/ClientsFeed/ClientsLoading"
+import {getReviews} from "@/utils/reviews"
 
 import styles from "./Clients.module.scss"
 import {Client} from "./ClientTypes"
